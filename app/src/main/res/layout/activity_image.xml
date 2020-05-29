@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/albumId"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:text="abc"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/albumPhotoId"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/albumId"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:text="xyz" />
+
+    <ImageView
+        android:id="@+id/albumImage"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/albumPhotoId"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:src = "@drawable/ic_launcher_background"
+        android:scaleType="centerInside"
+        />
+
+    <TextView
+        android:id="@+id/albumTitle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/albumImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="123" />
+
+
+</LinearLayout>

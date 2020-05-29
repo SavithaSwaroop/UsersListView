@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UsersListView</string>
+    <string name="user_info"> User Info</string>
+    <string name="title_activity_album">AlbumActivity</string>
+    <string name="album_label">Album ID:</string>
+    <string name="image_view_ext_set_task_key" translatable="false">dummy</string>
+</resources>

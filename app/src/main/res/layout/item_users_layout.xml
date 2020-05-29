@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class = "UserBinding">
+
+        <variable
+            name = "usersmodel"
+            type="com.example.userslistview.viewmodel.UsersViewModel"
+            />
+
+
+
+    </data>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp"
+ >
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDodgerBlue"
+        android:layout_weight="4">
+
+        <TextView
+            android:id="@+id/userIdLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:text="ID:"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/userId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:text="@{usersmodel.usr.id}"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userId"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:text="@{usersmodel.usr.name}" />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userName"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:text="@{usersmodel.usr.email}" />
+
+        <TextView
+            android:id="@+id/userPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userEmail"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:text="@{usersmodel.usr.phone}" />
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+</layout>

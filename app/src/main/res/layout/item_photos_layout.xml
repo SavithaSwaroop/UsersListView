@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class = "PhotosBinding">
+
+        <variable
+            name = "photosmodel"
+            type="com.example.userslistview.viewmodel.PhotosViewModel"
+            />
+
+
+
+    </data>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/colorDodgerBlue">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="150dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:scaleType="centerInside"
+        android:src="@{photosmodel.photo.thumbnailUrl}"
+        />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:text="@{photosmodel.photo.title}"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"/>
+
+</LinearLayout>
+</layout>
